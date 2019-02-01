@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Dialog9 : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class Dialog9 : MonoBehaviour
 
     public GameObject continueButton;
     public GameObject BackgroundText;
+    public GameObject Mom;
 
     public GameObject pandry;
     Animator anim;
@@ -27,6 +30,7 @@ public class Dialog9 : MonoBehaviour
         FirstText();
         BackgroundText.SetActive(true);
         continueButton.SetActive(false);
+        Mom = GetComponent<GameObject>();
         if (isDisplayingText == false)
         {
             StartCoroutine(Type());
@@ -56,6 +60,7 @@ public class Dialog9 : MonoBehaviour
                 if(index == 14)
                 {
                     anim.SetBool("openPandry", true);
+                    Mom.layer = 3;
                 }
                 StartCoroutine(Type());
             }
@@ -66,6 +71,7 @@ public class Dialog9 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+            SceneManager.LoadScene("Credits");
         }
     }
 
@@ -100,21 +106,20 @@ public class Dialog9 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-        "M : Oh Max! How are you? I’m back to home sooner than I expected..",
+        "Margot : Oh Max! How are you? I’m back to home sooner than I expected..",
         "Max : Wouarf! Wouarf!",
-        "M : Do you know where Dad and Mom are?.........",
-        "M : What is this thing in your jaw? Is it...?" ,
+        "Margot : Do you know where Dad and Mom are?.........",
+        "Margot : What is this thing in your jaw? Is it...?" ,
         "Max : Wouarf! Wouarf! ",
-        "M : It’s weird!",
-        "M : Oh Dad looks! ",
-        "M : Max found something!",
+        "Margot : It’s weird!",
+        "Margot : Oh Dad looks! ",
+        "Margot : Max found something!",
         "Dad : Oh Max, you have something in your…. An underpant????????????????????",
-        "M : It’s strange daddy! Mom seems to be not here.",
+        "Margot : It’s strange daddy! Mom seems to be not here.",
         "Dad : Humph, it’s nothing I think!...",
-        "M : Dad, I feel that someone is hidden somewhere…",
-        "M : Oh Max, you smell something close to the wardrobe??",
+        "Margot : Dad, I feel that someone is hidden somewhere…",
+        "Margot : Oh Max, you smell something close to the wardrobe??",
         "Max : Wouarf! Wouarf!Wouarf!Wouaf!",
-        "(Wardrobe is opened, lovers are discovered)",
          " Dad : Oh my God! My own wife! I can’t believe it.",
          "Mother : It’s not what you think honey!",
          "Dad : Oh I see! I...",

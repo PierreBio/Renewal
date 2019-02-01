@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialog10 : MonoBehaviour
 {
@@ -59,6 +60,7 @@ public class Dialog10 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+            SceneManager.LoadScene("Credits");
         }
     }
 
@@ -99,9 +101,9 @@ public class Dialog10 : MonoBehaviour
         "Max : Yes I help her!",
         "Eric : Oh you’re kind Max!.......",
         "Eric : WHAAAAAAT?MAX!? YOU’RE SPEAKING!",
-        "M : Yes, he isspeaking dog!",
+        "Margot: Yes, he isspeaking dog!",
         "Eric : It’s impossible! It’s a trap!",
-        "M : No I assure you! ",
+        "Margot: No I assure you! ",
         "Max : Hello Eric! I know you don’t believe me, but it’s true!",
         "Eric : Waaaaah!",
         "Max : I’m from the future. A world of possibilities is before us.",

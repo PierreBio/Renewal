@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class SoundsEffects : MonoBehaviour
 {
 
-    /// <summary>
-    /// Singleton
-    /// </summary>
     public static SoundsEffects Instance;
 
+    private AudioSource Source;
     public AudioClip typingSound;
-    public AudioClip fire;
+    public AudioClip AmbientSound;
+    public AudioClip DecorSound;
+
 
 
     void Awake()
@@ -25,25 +26,40 @@ public class SoundsEffects : MonoBehaviour
 
     private void Start()
     {
-        MakeFireSound();
+        Source = GetComponent<AudioSource>();
+        MakeAmbientSound();
     }
 
     public void MakeTypingSound()
     {
-        MakeSound(typingSound);
+        AudioSource.PlayClipAtPoint(typingSound, transform.position);
     }
 
-    public void MakeFireSound()
+    public void MakeAmbientSound()
     {
-        MakeSound(fire);
+        Source.clip = AmbientSound;
+        Source.Play(0);
+    }
+
+    public void MakeDecorSound()
+    {
+        AudioSource.PlayClipAtPoint(DecorSound, transform.position);
+    }
+
+    public void Stop()
+    {
+        Stop(Source);
     }
 
     /// <summary>
     /// Lance la lecture d'un son
     /// </summary>
     /// <param name="originalClip"></param>
-    private void MakeSound(AudioClip originalClip)
+
+
+    private void Stop(AudioSource originalClip)
     {
-        AudioSource.PlayClipAtPoint(originalClip, transform.position);
+        originalClip.Stop();
+
     }
 }

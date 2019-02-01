@@ -51,7 +51,7 @@ public class DeplacementScene1 : MonoBehaviour
         if (gameObject.name == "sofaCollider")
         {
             Debug.Log("OkSofaCollider");
-            Dialog1.Instance.doorEvent();
+            Dialog1.Instance.sofaEvent();
         }
     }
 }

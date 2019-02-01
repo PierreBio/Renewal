@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Dialog3 : MonoBehaviour
 {
@@ -59,6 +61,8 @@ public class Dialog3 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+            SceneManager.LoadScene("Credits");
+
         }
     }
 
@@ -118,24 +122,6 @@ public class Dialog3 : MonoBehaviour
          "Margot : Why are you crying? It’s not true, they’re lying, they’re just joking, right?",
          "Aurélie : I’m sorry Margot, you shouldn’t have watched this, you should never have watched this.",
          "Margot :  …Mom…"};
-    }
-
-    public void AwardsEvent()
-    {
-        if (isDisplayingText == false)
-        {
-            this.sentences = new string[] {
-        "M : A puppy ?!",
-        "A : Happy Birthday Margaux !",
-        " J : I present to you the new member of our family ! What’s his name ?" ,
-         "M : Max",
-         " A : Welcome home Max !"
-        };
-
-            index = 0;
-            StartCoroutine(Type());
-            isDisplayingText = true;
-        }
     }
 
 }

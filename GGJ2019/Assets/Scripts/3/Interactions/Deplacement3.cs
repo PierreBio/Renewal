@@ -34,14 +34,4 @@ public class Deplacement3 : MonoBehaviour
         }
     }
 
-    void OnMouseDown()
-    {
-        isMoving = true;
-
-        if (gameObject.name == "awards2Collider")
-        {
-            Debug.Log("Ok");
-            Dialog3.Instance.AwardsEvent();
-        }
-    }
 }

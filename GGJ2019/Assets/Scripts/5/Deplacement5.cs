@@ -38,10 +38,15 @@ public class Deplacement5 : MonoBehaviour
     {
         isMoving = true;
 
-        if (gameObject.name == "awards2Collider")
+        if (gameObject.name == "Jerome")
         {
             Debug.Log("Ok");
-            Dialog5.Instance.AwardsEvent();
+            Dialog5.Instance.JeromeEvent();
+        }
+        if (gameObject.name == "Policier")
+        {
+            Debug.Log("Ok");
+            Dialog5.Instance.PoliceEvent();
         }
     }
 }

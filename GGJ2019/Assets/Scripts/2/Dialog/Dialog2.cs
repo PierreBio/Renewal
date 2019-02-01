@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Dialog2 : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class Dialog2 : MonoBehaviour
     bool isDisplayingText = false;
 
     public static Dialog2 Instance;
+
+    bool eventAwards = false;
+    bool eventUncle = false;
 
 
     // Start is called before the first frame update
@@ -59,6 +63,15 @@ public class Dialog2 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+
+            if (eventAwards == true)
+            {
+                SceneManager.LoadScene("3");
+            }
+            if (eventUncle == true)
+            {
+                SceneManager.LoadScene("4");
+            }
         }
     }
 
@@ -110,12 +123,26 @@ public class Dialog2 : MonoBehaviour
     {
         if (isDisplayingText == false)
         {
+            eventAwards = true;
             this.sentences = new string[] {
-        "M : A puppy ?!",
-        "A : Happy Birthday Margot !",
-        " J : I present to you the new member of our family ! What’s his name ?" ,
-         "M : Max",
-         " A : Welcome home Max !"
+        "Margot : All this awards!",
+        "Eric : I'm invicible!",
+        };
+      
+            index = 0;
+            StartCoroutine(Type());
+            isDisplayingText = true;
+        }
+    }
+
+    public void UncleEvent()
+    {
+        eventUncle = true;
+        if (isDisplayingText == false)
+        {
+            this.sentences = new string[] {
+        "Margot : Oh, in fact, I want to hug you before your match uncle!",
+        "Eric : Thank you Margot!",
         };
 
             index = 0;

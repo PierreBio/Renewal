@@ -19,21 +19,24 @@ public class Dialog1 : MonoBehaviour
     bool eventDoor = false;
     bool eventSofa = false;
     bool eventPresent = false;
+    
 
     public GameObject door;
+    public GameObject present;
+    
 
     public static Dialog1 Instance;
 
-    //Animation
-
+    //Animations
     Animator anim;
+    Animator anim2;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        FirstText();
         BackgroundText.SetActive(true);
+        FirstText();
         continueButton.SetActive(false);
         if (isDisplayingText == false)
         {
@@ -107,6 +110,7 @@ public class Dialog1 : MonoBehaviour
     void Awake()
     {
         anim = door.GetComponent<Animator>();
+        anim2 = present.GetComponent<Animator>();
         if (Instance != null)
         {
             Debug.LogError("Multiple instances of DialogScene1!");
@@ -135,7 +139,8 @@ public class Dialog1 : MonoBehaviour
     {
         if (isDisplayingText == false)
         {
-            this.sentences = new string[] {
+        anim2.SetBool("openPresent", true);
+        this.sentences = new string[] {
         "Margot : A puppy?!",
         "Aurélie : Happy Birthday Margot!",
         "Jérôme : I present to you the new member of our family! What’s his name?" ,
@@ -143,7 +148,8 @@ public class Dialog1 : MonoBehaviour
         "Aurélie : Welcome home Max!"
         };
 
-    index = 0;
+        eventPresent = true;
+        index = 0;
         StartCoroutine(Type());
         isDisplayingText = true;
         }
@@ -159,9 +165,9 @@ public class Dialog1 : MonoBehaviour
                 "(Margot thinking :I just have to reach the door)"
                 };
             index = 0;
+            eventDoor = true;
             StartCoroutine(Type());
             isDisplayingText = true;
-
         }
     }
 
@@ -177,7 +183,7 @@ public class Dialog1 : MonoBehaviour
         "Commentator : ...deviates a knee to feint and oOoh a straight punch combine with a hook - punch and this is a K.OOO!!",
          "Margot : Uncle is amazing!"
         };
-
+            eventSofa = true;
             index = 0;
             StartCoroutine(Type());
             isDisplayingText = true;

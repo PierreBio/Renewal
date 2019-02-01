@@ -43,5 +43,11 @@ public class Deplacement2 : MonoBehaviour
             Debug.Log("Ok");
             Dialog2.Instance.AwardsEvent();
         }
+        if (gameObject.name == "Oncle")
+                {
+                    Debug.Log("Ok");
+                    Dialog2.Instance.UncleEvent();
+                }
     }
+    
 }

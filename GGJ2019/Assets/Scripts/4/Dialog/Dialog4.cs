@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Dialog4 : MonoBehaviour
 {
@@ -59,6 +61,8 @@ public class Dialog4 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+            SceneManager.LoadScene("Credits");
+
         }
     }
 
@@ -92,38 +96,40 @@ public class Dialog4 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-         /*"Margaux : Uncle ! I saw you at the tv, that was amazing ! *(Majuscules ?)* right uppercut , left hook and K.O. Did you beat all of them?",         
-          "Margaux :Have you ever lost ? Are your opponents scared about you before the match ?",
-        "Eric : Slowly, Slowly, young girl. The match that you saw wasn’t the most impressive, but the one I’m preparing is !",
-        "M : You have another fight ?" ,
-        "E : The finale comes. A critical stage that require a lot of physical preparation as well as mental preparation.",
-        " M : *Attentive*",
-        " E : Unfortunately an old injury has resurfaced in my last fight.",
-        "  M : Is it a serious injury? You shouldn’t go then…",
-        "NO ! That’s when we see true champions.Those who know to surpass themselves.",
-         "Those who are capable of tap to their limits and even beyond !",
-        " A : Margaux is right.This fight is too dangerous in your state Eric.",
-        " E : And that’s when we rewrite history young girl. We can’t become champions " +
-        "without taking any risks and without surpass ourselves.",*/
-         " M : I will watching you on TV uncle !"};
-    }
+        "Eric : Margot, I present to you Joshua, he’s in the finale with me.",
+         "Margot : Hi Joshua, I’m Margot.",
+        "Joshua : Hi! Margot, Eric told me a lot already about his wonderful niece.",
+        "Eric & Jérôme : Welcome home Joshua!" ,
+        "Eric : Do you want a coffee before starting?",
+        "Joshua : Why not, thank you!",
+        "Margot: Why are you doing the finale here uncle?",
+        "Eric : Because the best fighter can decide the emplacement of their finale!",
+        "Margot : That’s cool!",
+         "Joshua : So when do we start Eric?!",
+        "Eric : Now, Joshua! I hope you came prepared.",
+        "Joshua : Who do you think you’re talking to!",
+        "Jérôme : Ok, I will give the countdown.",
+         "Jérôme: Rock, paper, scissors…",
+         "Jérôme : One point for Joshua, zero for Eric.",
+         "Jérôme : Rock, paper, scissors…",
+         "Jérôme : One point for Eric, one for Joshua",
+         "Jérôme : Rock, paper, scissors…",
+         "Jérôme : Two points for Joshua, two for Eric",
+         "Joshua : You’re stronger than before, it’s a very nice fight.",
+         "Eric : Thanks, you’re not bad yourself.",
+         "Jérôme : Ok, last round!",
+         "Jérôme : Rock, paper, scissors…",
+         "Jérôme : And Eric is the winner of the great finale!!",
+         "Eric : Yes! It was a true fight, as expected from last year’s champion!",
+         "Eric : Yes! It was a true fight, as expected from last year’s champion!",
+         "Joshua : Thanks, you deserve the first place, it was an amazing fight.",
+         "Margot : …Guys? The fight was not supposed to be boxing ?",
+         "Eric : Ahah no, the fighter that you saw in your tv the other day was just somebody who looks like me, a doppelganger you could say.",
+         "Margot : So, you never fight with anyone?",
+         "Eric : I fight but in another category and I’m the winner! Are you proud of your uncle?",
+         "Margot : Of course… yes…!"
 
-    public void AwardsEvent()
-    {
-        if (isDisplayingText == false)
-        {
-            this.sentences = new string[] {
-        "M : A puppy ?!",
-        "A : Happy Birthday Margaux !",
-        " J : I present to you the new member of our family ! What’s his name ?" ,
-         "M : Max",
-         " A : Welcome home Max !"
         };
-
-            index = 0;
-            StartCoroutine(Type());
-            isDisplayingText = true;
-        }
     }
 
 }
