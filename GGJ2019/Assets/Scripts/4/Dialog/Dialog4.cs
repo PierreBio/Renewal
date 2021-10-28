@@ -15,10 +15,15 @@ public class Dialog4 : MonoBehaviour
     public GameObject continueButton;
     public GameObject BackgroundText;
 
+    public GameObject oncle;
+    public GameObject boxer;
+    //Animations
+    Animator anim;
+    Animator anim2;
+
     bool isDisplayingText = false;
 
     public static Dialog4 Instance;
-
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +47,15 @@ public class Dialog4 : MonoBehaviour
             SoundsEffects.Instance.MakeTypingSound();
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        if(sentences[index] == "Jérôme: Rock, paper, scissors…")
+        {
+            Debug.Log("Ok");
+            anim.enabled = true;
+            anim2.enabled = true;
+            anim.SetBool("fight", true);
+            anim2.SetBool("fight", true);
+        }
     }
 
     public void NexSentence()
@@ -62,7 +76,6 @@ public class Dialog4 : MonoBehaviour
             isDisplayingText = false;
             BackgroundText.SetActive(false);
             SceneManager.LoadScene("Credits");
-
         }
     }
 
@@ -86,6 +99,9 @@ public class Dialog4 : MonoBehaviour
     //Events which can happened
     void Awake()
     {
+        anim = oncle.GetComponent<Animator>();
+        anim2 = boxer.GetComponent<Animator>();
+
         if (Instance != null)
         {
             Debug.LogError("Multiple instances of Dialog2!");

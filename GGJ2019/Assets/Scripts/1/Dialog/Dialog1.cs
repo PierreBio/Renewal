@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Dialog1 : MonoBehaviour
 {
     public TextMeshProUGUI textDisplay;
+    public GameObject UIText;
     string[] sentences;
     private int index;
     public float typingSpeed;
@@ -73,8 +74,9 @@ public class Dialog1 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
+            UIText.SetActive(true);
 
-            if(eventPresent == true)
+            if (eventPresent == true)
             {
                 SceneManager.LoadScene("8");
             }
@@ -98,6 +100,7 @@ public class Dialog1 : MonoBehaviour
         {
             BackgroundText.SetActive(true);
             continueButton.SetActive(true);
+            UIText.SetActive(false);
         }
         else
         {

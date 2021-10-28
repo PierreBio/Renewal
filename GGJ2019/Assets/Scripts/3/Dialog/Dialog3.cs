@@ -112,9 +112,9 @@ public class Dialog3 : MonoBehaviour
          "Commentator : He’s taken away on a stretcher, we hope that he’ll be fine.",
          "Aurélie : Ok, stop, you can go play now.",
          "Margot  But mom, I want to know if he’s alright.",
-         "Commentator : Ok, we have just learned sad news, Mister Eric died tonight."+
-         "Commentator : Apparently he had a pretty serious injury before coming and didn’t tell anyone."+
-         "Commentator : It was a head injury. He already told us in an interview that he wanted to die doing his passion, " +
+         "Commentator : Ok, we have just learned sad news, Mister Eric died tonight.",
+         "Commentator : Apparently he had a pretty serious injury before coming and didn’t tell anyone.",
+         "Commentator : It was a head injury. He already told us in an interview that he wanted to die doing his passion, ",
          "Commentator : but it was too early for us. The competition will end now with this tragic event, we offer our condolences to his family.",
          "Margot and Aurélie : ...",
          "Margot : it’s not true right?",

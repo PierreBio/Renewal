@@ -13,8 +13,6 @@ public class SoundsEffects : MonoBehaviour
     public AudioClip AmbientSound;
     public AudioClip DecorSound;
 
-
-
     void Awake()
     {
         if (Instance != null)

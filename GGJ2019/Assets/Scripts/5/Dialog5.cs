@@ -106,7 +106,7 @@ public class Dialog5 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-      /*   "Police :  Please, have a seat.",
+    "Police :  Please, have a seat.",
     "Aurélie & Jérôme : …",
     "Police :  I came to talk to you about the progress of our investigation.",
     "Aurélie : Did you find the murderer of our daughter?",
@@ -116,7 +116,7 @@ public class Dialog5 : MonoBehaviour
     "Jérôme  : What do you mean by that? Let this inspector finish, there is surely something, an element you found.",
     "Aurélie : Let him finish? Why? To hear that the investigation is abandoned?",
     "Jérôme  :  He said that they have leads, so they can’t give up so soon. Right, sir?",
-    "Police : I’m sorry, really. We decided to stop the investigation because of a lack of elements.",*/
+    "Police : I’m sorry, really. We decided to stop the investigation because of a lack of elements.",
     "Jérôme  : Stop it? Now? "
 };
     }
