@@ -5,47 +5,15 @@ using UnityEngine;
 public class Deplacement8 : MonoBehaviour
 {
     public GameObject mainCharacter;
-    public bool isMoving = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isMoving == true)
-        {
-            if (mainCharacter.transform.position.x < gameObject.transform.position.x - 2)
-            {
-                mainCharacter.transform.Translate(Time.deltaTime, 0, 0);
-
-            }
-            else if (mainCharacter.transform.position.x > gameObject.transform.position.x + 2)
-            {
-                mainCharacter.transform.Translate(-Time.deltaTime, 0, 0);
-            }
-
-            if (Mathf.Abs(mainCharacter.transform.position.x - gameObject.transform.position.x) < 2)
-            {
-                isMoving = false;
-            }
-        }
-    }
 
     void OnMouseDown()
     {
-        isMoving = true;
-
         if (gameObject.name == "DOGGO")
         {
-            Debug.Log("Ok");
             Dialog8.Instance.dogEvent();
         }
         if (gameObject.name == "coat")
         {
-            Debug.Log("Ok");
             Dialog8.Instance.jacketEvent();
         }
     }

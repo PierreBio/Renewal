@@ -15,6 +15,7 @@ public class Dialog9 : MonoBehaviour
     public GameObject continueButton;
     public GameObject BackgroundText;
     public GameObject Mom;
+    public GameObject Lover;
 
     public GameObject pandry;
     Animator anim;
@@ -30,7 +31,7 @@ public class Dialog9 : MonoBehaviour
         FirstText();
         BackgroundText.SetActive(true);
         continueButton.SetActive(false);
-        Mom = GetComponent<GameObject>();
+
         if (isDisplayingText == false)
         {
             StartCoroutine(Type());
@@ -60,7 +61,8 @@ public class Dialog9 : MonoBehaviour
                 if(index == 14)
                 {
                     anim.SetBool("openPandry", true);
-                    Mom.layer = 3;
+                    Mom.GetComponent<SpriteRenderer>().sortingOrder = 4;
+                    Lover.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 }
                 StartCoroutine(Type());
             }
@@ -106,34 +108,34 @@ public class Dialog9 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-        "Margot : Oh Max! How are you? I’m back to home sooner than I expected..",
-        "Max : Wouarf! Wouarf!",
-        "Margot : Do you know where Dad and Mom are?.........",
-        "Margot : What is this thing in your jaw? Is it...?" ,
-        "Max : Wouarf! Wouarf! ",
-        "Margot : It’s weird!",
-        "Margot : Oh Dad looks! ",
-        "Margot : Max found something!",
-        "Dad : Oh Max, you have something in your…. An underpant????????????????????",
-        "Margot : It’s strange daddy! Mom seems to be not here.",
-        "Dad : Humph, it’s nothing I think!...",
-        "Margot : Dad, I feel that someone is hidden somewhere…",
-        "Margot : Oh Max, you smell something close to the wardrobe??",
-        "Max : Wouarf! Wouarf!Wouarf!Wouaf!",
-         " Dad : Oh my God! My own wife! I can’t believe it.",
-         "Mother : It’s not what you think honey!",
-         "Dad : Oh I see! I...",
-         "Lover : Yes it’s not what you think!",
-         "Dad : Be quiet! You! You!You……",
-         "Dad : You betrayed me!!",
-         "Mother : You betrayed me the first! Don’t you remember?",
-         "Mother : When you bought this dog for your daughter! It was a way to speak with the beautiful seller of the pet shop!",
-         "Dad : I…..I ….",
-         "Lover : If I can, I would like to say that...",
-         "Dad : Be quiet fool! ",
-         "Dad : Listen honey, I love you. That seller was just a detail…",
-         "Lover : This “detail” as you say is MY WIFE!",
-         "Mother : What? That crazy woman! Out of my sight!!!!"
+            "Margot : Oh Max! How are you? I’m back to home sooner than I expected..",
+            "Max : Wouarf! Wouarf!",
+            "Margot : Do you know where Dad and Mom are?.........",
+            "Margot : What is this thing in your jaw? Is it...?" ,
+            "Max : Wouarf! Wouarf! ",
+            "Margot : It’s weird!",
+            "Margot : Oh Dad looks! ",
+            "Margot : Max found something!",
+            "Dad : Oh Max, you have something in your…. An underpant????????????????????",
+            "Margot : It’s strange daddy! Mom seems to be not here.",
+            "Dad : Humph, it’s nothing I think!...",
+            "Margot : Dad, I feel that someone is hidden somewhere…",
+            "Margot : Oh Max, you smell something close to the wardrobe??",
+            "Max : Wouarf! Wouarf!Wouarf!Wouaf!",
+            " Dad : Oh my God! My own wife! I can’t believe it.",
+            "Mother : It’s not what you think honey!",
+            "Dad : Oh I see! I...",
+            "Lover : Yes it’s not what you think!",
+            "Dad : Be quiet! You! You!You……",
+            "Dad : You betrayed me!!",
+            "Mother : You betrayed me the first! Don’t you remember?",
+            "Mother : When you bought this dog for your daughter! It was a way to speak with the beautiful seller of the pet shop!",
+            "Dad : I…..I ….",
+            "Lover : If I can, I would like to say that...",
+            "Dad : Be quiet fool! ",
+            "Dad : Listen honey, I love you. That seller was just a detail…",
+            "Lover : This “detail” as you say is MY WIFE!",
+            "Mother : What? That crazy woman! Out of my sight!!!!"
         };
     }
 

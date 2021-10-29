@@ -105,18 +105,19 @@ public class Dialog2 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-        "Margot : Uncle! I saw you on tv, you were amazing! Right uppercut, left hook and K.O. Did you beat all of them? Have you ever lost? Are your opponents scared of you before the match?",
-        "Eric : Easy, easy, young lady. The match that you saw wasn’t the most impressive, but the one I’m preparing for will be!",
-        "Margot : You have another fight?",
-        "Eric : The finale is coming. A critical stage that requires a lot of physical preparation as well as mental preparation. Unfortunately an old injury reared its ugly head during my last fight.",
-        "Margot : Is it a serious injury? You shouldn’t go then…",
-        "Eric :  NO! That’s when we see true champions.",
-        "Those who know how to surpass themselves.",
-         "Those who are capable of overcoming their limits and even beyond!",
-         "You must never let anything drag you down.",
-        "Aurélie : Margot is right.This fight is too dangerous in your state Eric.",
-        "Eric : And that’s when we make history young lady. We can’t become champion without taking any risks and without surpassing ourselves.",
-        "Margot : I will watch you on TV uncle!"};
+            "Margot : Uncle! I saw you on tv, you were amazing! Right uppercut, left hook and K.O. Did you beat all of them? Have you ever lost? Are your opponents scared of you before the match?",
+            "Eric : Easy, easy, young lady. The match that you saw wasn’t the most impressive, but the one I’m preparing for will be!",
+            "Margot : You have another fight?",
+            "Eric : The finale is coming. A critical stage that requires a lot of physical preparation as well as mental preparation. Unfortunately an old injury reared its ugly head during my last fight.",
+            "Margot : Is it a serious injury? You shouldn’t go then…",
+            "Eric :  NO! That’s when we see true champions.",
+            "Those who know how to surpass themselves.",
+            "Those who are capable of overcoming their limits and even beyond!",
+            "You must never let anything drag you down.",
+            "Aurélie : Margot is right.This fight is too dangerous in your state Eric.",
+            "Eric : And that’s when we make history young lady. We can’t become champion without taking any risks and without surpassing ourselves.",
+            "Margot : I will watch you on TV uncle!"
+            };
     }
 
     public void AwardsEvent()
@@ -125,9 +126,9 @@ public class Dialog2 : MonoBehaviour
         {
             eventAwards = true;
             this.sentences = new string[] {
-        "Margot : All this awards!",
-        "Eric : I'm invicible!",
-        };
+                "Margot : All this awards!",
+                "Eric : I'm invicible!",
+            };
       
             index = 0;
             StartCoroutine(Type());
@@ -141,9 +142,9 @@ public class Dialog2 : MonoBehaviour
         if (isDisplayingText == false)
         {
             this.sentences = new string[] {
-        "Margot : Oh, in fact, I want to hug you before your match uncle!",
-        "Eric : Thank you Margot!",
-        };
+                "Margot : Oh, in fact, I want to hug you before your match uncle!",
+                "Eric : Thank you Margot!",
+            };
 
             index = 0;
             StartCoroutine(Type());

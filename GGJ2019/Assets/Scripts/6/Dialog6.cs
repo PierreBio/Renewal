@@ -96,8 +96,10 @@ public class Dialog6 : MonoBehaviour
     {
         this.sentences = new string[] {
             "Jérôme : Aurélie… Margot… I miss you so much…",
-    "Jérôme :  Why did you abandon me Aurélie… It’s your daughter’s home, your husband’s home.",
-    "Jérôme : *stop* Did you already forget us? Did you forget me?"
+            "Jérôme : Why did you abandon me Aurélie… It’s your daughter’s home, your husband’s home.",
+            "Jérôme : *stop* Did you already forget us? Did you forget me?",
+            "Jérôme : We had to fight!",
+            "Jérôme : I can't move on...",
         };
     }
 

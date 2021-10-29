@@ -18,6 +18,13 @@ public class Dialog10 : MonoBehaviour
 
     public static Dialog10 Instance;
 
+    public GameObject mother;
+    public GameObject father;
+    public bool isMoving = false;
+
+    //Animations
+    Animator anim;
+    Animator anim2;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +37,9 @@ public class Dialog10 : MonoBehaviour
             StartCoroutine(Type());
             isDisplayingText = true;
         }
+
+        anim = mother.GetComponent<Animator>();
+        anim2 = father.GetComponent<Animator>();
     }
 
     IEnumerator Type()
@@ -41,6 +51,25 @@ public class Dialog10 : MonoBehaviour
             SoundsEffects.Instance.MakeTypingSound();
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        if (sentences[index] == "Aurélie and Jérôme together : Of course we know. Since we discovered his secret, we are reassured.")
+        {
+            StartCoroutine(move(4.5f));
+        }
+    }
+
+    IEnumerator move(float duration)
+    {
+        mother.SetActive(true);
+        father.SetActive(true);
+        isMoving = true;
+
+        yield return new WaitForSeconds(duration);
+
+        isMoving = false;
+
+        anim.enabled = false;
+        anim2.enabled = false;
     }
 
     public void NexSentence()
@@ -79,6 +108,12 @@ public class Dialog10 : MonoBehaviour
             continueButton.SetActive(false);
         }
 
+        if(isMoving)
+        {
+            father.transform.Translate(Vector3.left * Time.deltaTime, Camera.main.transform);
+            mother.transform.Translate(Vector3.left * Time.deltaTime, Camera.main.transform);
+        }
+
     }
 
     //Events which can happened
@@ -101,7 +136,7 @@ public class Dialog10 : MonoBehaviour
         "Max : Yes I help her!",
         "Eric : Oh you’re kind Max!.......",
         "Eric : WHAAAAAAT?MAX!? YOU’RE SPEAKING!",
-        "Margot: Yes, he isspeaking dog!",
+        "Margot: Yes, he is a speaking dog!",
         "Eric : It’s impossible! It’s a trap!",
         "Margot: No I assure you! ",
         "Max : Hello Eric! I know you don’t believe me, but it’s true!",

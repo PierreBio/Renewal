@@ -69,7 +69,6 @@ public class Dialog7 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         if (textDisplay.text == sentences[index])
         {
             BackgroundText.SetActive(true);
@@ -95,28 +94,19 @@ public class Dialog7 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-        "Aurélie : A member of parliament, I knew it, the investigation stopped too early for it to because of a lack of evidence.",
-    "Jérôme : This fight will be tough but we have to do it for margot.",
-    "Aurélie : We have to be heard but who can we turn to ? We are nothing compared to him… Why did it have to be someone like him!",
-    "Jérôme : You’re right, what can we do in a situation like this ? Nobody would listen to us…",
-    "Jérôme: Now, we will replay the scene and you can intervene when you want to say something.Ok?",
-   "Policeman : (brouhaha)Yes !Ok !",
-    "Aurélie : A member of parliament, I knew it, the investigation stopped too early for it to because of a lack of evidence.",
- "Jérôme : This fight will be tough but we have to do it for margot.",
- "Aurélie : We have to be heard but who can we turn to ? We are nothing compared to him… Why did it have to be someone like him!",
- "Policeman : STOP",
- "Jérôme : Yes, what do you want to say?",
- "Policeman : It’s not because the murderer is highly placed that you have to stop your fight.I think that you have to at least try.",
-    "Policeman: They can contact newspapers or journalists to be heard.Or present evidence to a lot of people.",
-    "Jérôme: True, in this situation the worse you can be is alone, you feel like nobody will believe you.",
-   "Policeman : Yes, like what was said before, you can create groups and manifest in the street, manifestations have already succeeded, but you will never have to stop.",
-   "Policeman : I don’t know if it’s great to hang on to this fight.If you don’t win, you will always think about it.",
-  "Policeman : Yeah, but it’s better than doing nothing, and in this case you will never know if the member of parliament will be punished one day.",
-    "Aurélie: Ok thank you all, it’s time to finish the play. Thank you for your reactions, this situation is rare but it can happened.You don’t have to be alone, talking to a lot of people and newspaper is a great idea to be heard!",
-   "Jérôme : Thank you and see you soon for another play.",
-
-
-        " Margot : I will watching you on TV uncle !"};
+            "Aurélie : A member of parliament, I knew it, the investigation stopped too early for it to because of a lack of evidence.",
+            "Jérôme : This fight will be tough but we have to do it for margot.",
+            "Aurélie : We have to be heard but who can we turn to ? We are nothing compared to him… Why did it have to be someone like him!",
+            "Policeman : STOP",
+            "Jérôme : Yes, what do you want to say?",
+            "Policeman : It’s not because the murderer is highly placed that you have to stop your fight.I think that you have to at least try.",
+            "Policeman: They can contact newspapers or journalists to be heard.Or present evidence to a lot of people.",
+            "Jérôme: True, in this situation the worse you can be is alone, you feel like nobody will believe you.",
+            "Policeman : Yes, like what was said before, you can create groups and manifest in the street, manifestations have already succeeded, but you will never have to stop.",
+            "Policeman : I don’t know if it’s great to hang on to this fight.If you don’t win, you will always think about it.",
+            "Policeman : Yeah, but it’s better than doing nothing, and in this case you will never know if the member of parliament will be punished one day.",
+            "Aurélie: Thank you for your reactions, this situation is rare but it can happened.You don’t have to be alone, talking to a lot of people and newspaper is a great idea to be heard!",
+        };
     }
 
 

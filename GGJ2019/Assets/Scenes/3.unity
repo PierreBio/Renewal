@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 978936049}
-  typingSpeed: 0.025
+  typingSpeed: 0.01
   continueButton: {fileID: 978936048}
   BackgroundText: {fileID: 562640932}
 --- !u!4 &4461147

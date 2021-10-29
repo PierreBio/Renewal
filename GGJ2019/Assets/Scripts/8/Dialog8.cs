@@ -105,25 +105,24 @@ public class Dialog8 : MonoBehaviour
     void FirstText()
     {
         this.sentences = new string[] {
-        "Margot : You’re my best friend Max. I know you can understand me!",
-        "Max : Woof! Woof!",
-        "Margot : Dad and mom think I’m too attached to you … But they’re wrong. You help me find a meaning to my life.",
-        "Max : Woof!",
-        "Margot: I have to go to school now….",
-        "Max : Woof! Wait!",
-        "Margot: No I can’t I have to….",
-       " Margot : ….",
-        "Margot : What? Did you just talk?",
-        "Max : Woof!",
-       " Margot : I must have imagined it…",
-        "Margot : …..",
-        "Margot : I can’t hide it anymore, dad and mom are really annoyed by your behaviour.",
-        "Margot : They want to… they want to… abandon you…",
-        "Margot : Mom especially… she gets weird sometimes...",
-        "Max : (plaintive cry)",
-       " Margot : I know you’re special. We have to decide on what to do."
-
-};
+            "Margot : You’re my best friend Max. I know you can understand me!",
+            "Max : Woof! Woof!",
+            "Margot : Dad and mom think I’m too attached to you … But they’re wrong. You help me find a meaning to my life.",
+            "Max : Woof!",
+            "Margot: I have to go to school now….",
+            "Max : Woof! Wait!",
+            "Margot: No I can’t I have to….",
+           " Margot : ….",
+            "Margot : What? Did you just talk?",
+            "Max : Woof!",
+           " Margot : I must have imagined it…",
+            "Margot : …..",
+            "Margot : I can’t hide it anymore, dad and mom are really annoyed by your behaviour.",
+            "Margot : They want to… they want to… abandon you…",
+            "Margot : Mom especially… she gets weird sometimes...",
+            "Max : (plaintive cry)",
+           " Margot : I know you’re special. We have to decide on what to do."
+        };
     }
 
     public void dogEvent()
@@ -132,12 +131,12 @@ public class Dialog8 : MonoBehaviour
         {
             eventDog = true;
             this.sentences = new string[] {
-        "Margot : I think you’re hiding something from me Max.",
-        "Max : Woof?",
-        "Margot : Maybe you’re doing this for my safety…",
-        "Margot : I’m convinced that you want me to be safe and happy…",
-        "Margot : We will find a way to help you, together."
-        };
+                "Margot : I think you’re hiding something from me Max.",
+                "Max : Woof?",
+                "Margot : Maybe you’re doing this for my safety…",
+                "Margot : I’m convinced that you want me to be safe and happy…",
+                "Margot : We will find a way to help you, together."
+            };
 
             index = 0;
             StartCoroutine(Type());
@@ -151,12 +150,12 @@ public class Dialog8 : MonoBehaviour
         if (isDisplayingText == false)
         {
             this.sentences = new string[] {
-       "Margot : I think you’re hiding something from me Max.",
-        "Max : Woof?",
-        "Margot : Maybe you’re doing this for my safety…",
-       " Margot : I’m convinced that you want me to be safe and happy…",
-        "Margot : We will find a way to help you, together."
-        };
+                "Margot : I think you’re hiding something from me Max.",
+                "Max : Woof?",
+                "Margot : Maybe you’re doing this for my safety…",
+                " Margot : I’m convinced that you want bad things happens…",
+                "Margot : I have to go to school now."
+            };
 
             index = 0;
             StartCoroutine(Type());

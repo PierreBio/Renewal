@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textDisplay: {fileID: 665109782}
-  typingSpeed: 0.025
+  typingSpeed: 0.01
   continueButton: {fileID: 665109781}
   BackgroundText: {fileID: 1270761493}
   oncle: {fileID: 709822774}
@@ -2517,7 +2517,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
