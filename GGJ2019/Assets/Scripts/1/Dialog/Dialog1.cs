@@ -72,7 +72,14 @@ public class Dialog1 : MonoBehaviour
             continueButton.SetActive(false);
             isDisplayingText = false;
             BackgroundText.SetActive(false);
-            UIText.SetActive(true);
+
+            if(!eventPresent || !eventDoor || !eventSofa)
+            {
+                UIText.SetActive(false);
+            } else
+            {
+                UIText.SetActive(true);
+            }
 
             if (eventPresent == true)
             {

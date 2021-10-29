@@ -2194,7 +2194,7 @@ PrefabInstance:
     - target: {fileID: 2678319708301402283, guid: 12cc83a1732fcc444a390455bdd01b64,
         type: 3}
       propertyPath: m_Constraints
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2678319708301402283, guid: 12cc83a1732fcc444a390455bdd01b64,
         type: 3}
@@ -2269,6 +2269,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4261104078893845807, guid: eebc775d9a1bd4149b92a989662afb7b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4261104078893845841, guid: eebc775d9a1bd4149b92a989662afb7b,
         type: 3}
@@ -4426,6 +4431,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2032530300}
     m_Modifications:
+    - target: {fileID: 3167464688802661292, guid: 3b085f844fedb1a40b18f07b93b97a88,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3167464688802661295, guid: 3b085f844fedb1a40b18f07b93b97a88,
         type: 3}
       propertyPath: m_Name
