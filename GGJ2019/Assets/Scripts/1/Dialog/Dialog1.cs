@@ -59,6 +59,8 @@ public class Dialog1 : MonoBehaviour
     {
         if (index < sentences.Length - 1)
         {
+            UIText.SetActive(false);
+
             index++;
             textDisplay.text = "";
             if (isDisplayingText == true)
@@ -73,13 +75,11 @@ public class Dialog1 : MonoBehaviour
             isDisplayingText = false;
             BackgroundText.SetActive(false);
 
-            if(!eventPresent || !eventDoor || !eventSofa)
-            {
-                UIText.SetActive(false);
-            } else
+            if(!eventPresent && !eventDoor && !eventSofa)
             {
                 UIText.SetActive(true);
             }
+
 
             if (eventPresent == true)
             {
@@ -105,7 +105,6 @@ public class Dialog1 : MonoBehaviour
         {
             BackgroundText.SetActive(true);
             continueButton.SetActive(true);
-            UIText.SetActive(false);
         }
         else
         {
