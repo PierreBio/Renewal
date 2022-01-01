@@ -1,5 +1,5 @@
 # Renewal
-Narrative game
+Narrative game / Point' n Click
 
 - Unity C#
 - 2D project
