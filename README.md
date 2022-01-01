@@ -1,7 +1,7 @@
 # Renewal
 Narrative game
-
 Unity / C#
+2D project
 
 Small game made during the Global Game Jam 2019 (48 hours). During the GGJ, we didn't finish the game within the allotted time. I finished it with 5 more hours.
 
