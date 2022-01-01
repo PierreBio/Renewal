@@ -7,6 +7,7 @@ Small game made during the Global Game Jam 2019 (48 hours). During the GGJ, we d
 GGGJ link : https://globalgamejam.org/2019/games/renewal
 
 Itch.io link : https://lebioman.itch.io/renewal
+
 **Description**
 
 A home is a theater set. The place where all sorts of life-changing events take place, be they tragic, bizarre or happy ones. Choose what path the lives of Margot, Aurélie and Jérôme should take and explore the six different endings of this narrative fiction.
